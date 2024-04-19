@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+
+  <div class="container"> 
+    <div class="panel-left">
+      <div class="panel-content">
+        <img class="panel-image" src="../sofdes/images/icon.PNG" alt="Panel Image">
+        <h2>Ong n Prends</h2>
+      </div>
+
+      <div class="button-container0">
+        <div class="button-wrapper">
+          <img class="button-image" src="../sofdes/images/dboard.PNG" alt="Dashboard Image">
+          <button class="submit-btn0">Dashboard</button>
+        </div>
+      </div>
+
+      <div class="button-container1">
+        <div class="button-wrapper">
+          <img class="button-image" src="../sofdes/images/invt.PNG" alt="Inventory Image">
+          <button class="submit-btn1">Inventory</button>
+        </div>
+      </div>
+
+      <div class="button-container2">
+        <div class="button-wrapper">
+          <img class="button-image" src="../sofdes/images/sales.PNG" alt="Sales Report Image">
+          <button class="submit-btn2">Sales Report</button>
+        </div>
+      </div>
+
+      <div class="button-container3">
+        <div class="button-wrapper">
+          <img class="button-image" src="../sofdes/images/alert.PNG" alt="Alert Management Image">
+          <button class="submit-btn3">Alert Management</button>
+        </div>
+      </div>
+
+      <div class="button-container4">
+        <div class="button-wrapper">
+          <img class="button-image1" src="../sofdes/images/sout.PNG" alt="Sign Out Image">
+          <button class="submit-btn4">Sign Out</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <div class="content">
+      <h3>Inventory Summary</h3>
+
+    </div>
+    <div class="panel">
+  
+    </div>
+  </div>
+  
+
+
+
+
+
+
+</body>
+</html>

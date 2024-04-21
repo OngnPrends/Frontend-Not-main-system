@@ -41,10 +41,12 @@
   /* Style for search bar */
   .search-container {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .search-container input[type=text] {
     padding: 6px;
-    width: 30%;
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-right: 10px;
@@ -55,6 +57,14 @@
     color: white;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
+  }
+  .add-stocks-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
     cursor: pointer;
   }
 </style>
@@ -69,9 +79,14 @@
   <button type="button" onclick="searchTable()">Search</button>
 </div>
 
+<!-- + New Stocks button -->
+<div style="text-align: center;">
+  <button class="add-stocks-button" onclick="addNewStocks()">+ New Stocks</button>
+</div>
+
 <table id="inventoryTable">
   <tr>
-    <th>Order ID</th>
+    <th style="text-align: center;">Order ID</th>
     <th>Product</th>
     <th>Price (Php)</th>
     <th>Items</th>
@@ -168,7 +183,7 @@
     <td class="quantity">70/100</td>
     <td class="status"><span class="stock-status high-stock">High</span></td>
   </tr>
-  <!-- Add more rows as needed -->
+  <!-- Add more rows for your products here -->
 </table>
 
 <script>
@@ -213,6 +228,12 @@
         }
       }
     }
+  }
+
+  // Function to add new stocks
+  function addNewStocks() {
+    // Add your code here to handle adding new stocks
+    alert("Functionality to add new stocks will be implemented here.");
   }
 
   // Update status initially

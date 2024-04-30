@@ -29,11 +29,11 @@
         .table-container {
             width: 100%;
             display: flex;
-            justify-content: space-between; /* Align tables horizontally */
+            justify-content: space-between; 
         }
         .table-wrapper {
-            flex: 1; /* Each table occupies equal space */
-            margin-right: 20px; /* Add some space between tables */
+            flex: 1; 
+            margin-right: 20px;
         }
         table {
             width: 100%;
@@ -249,7 +249,7 @@
             { date: '2024-04-30', time: '10:00 PM', productName: 'Pillows', quantity: 5, unitPrice: 11.00 }
         ];
 
-        // Calculate total revenue and total cost for the whole year
+
         function calculateProfitForYear() {
             var totalRevenue = 0;
             var totalCost = 0;
@@ -266,7 +266,6 @@
             return { totalRevenue: totalRevenue.toFixed(2), totalCost: totalCost.toFixed(2), profit: profit.toFixed(2) };
         }
 
-        // Calculate total revenue and total cost for the whole day
         function calculateProfitForDay() {
             var currentDate = new Date().toISOString().slice(0, 10);
             var totalRevenue = 0;
@@ -275,7 +274,7 @@
             salesData.forEach(function(sale) {
                 if (sale.date === currentDate) {
                     var totalPrice = sale.quantity * sale.unitPrice;
-                    var profit = totalPrice * 0.20; // 20% profit
+                    var profit = totalPrice * 0.20; 
                     var cost = totalPrice - profit;
                     totalRevenue += totalPrice;
                     totalCost += cost;
@@ -286,13 +285,13 @@
             return { totalRevenue: totalRevenue.toFixed(2), totalCost: totalCost.toFixed(2), profit: profit.toFixed(2) };
         }
 
-        // Display profit for the whole year
+
         var profitYear = calculateProfitForYear();
         document.getElementById('totalRevenueYear').innerText = profitYear.totalRevenue;
         document.getElementById('totalCostYear').innerText = profitYear.totalCost;
         document.getElementById('profitYear').innerText = profitYear.profit;
 
-        // Display profit for the whole day
+
         var profitDay = calculateProfitForDay();
         document.getElementById('totalRevenueDay').innerText = profitDay.totalRevenue;
         document.getElementById('totalCostDay').innerText = profitDay.totalCost;

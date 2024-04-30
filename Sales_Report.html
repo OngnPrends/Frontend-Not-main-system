@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales Report</title>
     <style>
- body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
@@ -14,30 +14,27 @@
             align-items: center;
         }
         .menu {
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start; /* Align items to the left */
-    align-items: center; /* Align items vertically */
-}
-
-.menu-button {
-    margin-right: 20px; /* Add some space between buttons */
-    background-color: #4CAF50; /* Green background */
-    border: none;
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding */
-    text-align: center; /* Center text */
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.menu-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: flex-start; /* Align items to the left */
+            align-items: center; /* Align items vertically */
+        }
+        .menu-button {
+            margin-right: 20px; /* Add some space between buttons */
+            background-color: #4CAF50; /* Green background */
+            border: none;
+            color: white; /* White text */
+            padding: 10px 20px; /* Padding */
+            text-align: center; /* Center text */
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .menu-button:hover {
+            background-color: #45a049; /* Darker green on hover */
         }
         .menu button {  
             display: block;
@@ -76,8 +73,21 @@
         }
     </style>
 </head>
+<body>
+    <div class="menu">
+        <button class="menu-button">Dashboard</button>
+        <button class="menu-button">Inventory</button>
+        <button class="menu-button">Sales Report</button>
+        <button class="menu-button">Alert Management</button>
+        <button class="menu-button">Sign Out</button>
+    </div>
+
     <div>
         <h1>Sales Report</h1>
+        <!-- Add search bar -->
+        <div>
+            <input type="date" id="searchDate" placeholder="Search by date...">
+        </div>
         <table>
             <thead>
                 <tr>
@@ -90,111 +100,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>07:30 AM</td>
-                    <td>Yakult(pack)</td>
-                    <td>5</td>
-                    <td>₱80.00</td>
-                    <td>₱400.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>10:15 AM</td>
-                    <td>Piatos (large)</td>
-                    <td>3</td>
-                    <td>₱35.00</td>
-                    <td>₱105.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>02:45 PM</td>
-                    <td>Piatos (small)</td>
-                    <td>4</td>
-                    <td>₱16.00</td>
-                    <td>₱64.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>05:30 PM</td>
-                    <td>Yakult (per piece)</td>
-                    <td>7</td>
-                    <td>₱16.00</td>
-                    <td>₱112.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>09:00 PM</td>
-                    <td>Piatos (small)</td>
-                    <td>9</td>
-                    <td>₱16.00</td>
-                    <td>₱144.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>07:45 AM</td>
-                    <td>Marlboro Red (pack)</td>
-                    <td>6</td>
-                    <td>₱180.00</td>
-                    <td>₱1,080.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>11:30 AM</td>
-                    <td>Marlboro Red (per piece)</td>
-                    <td>2</td>
-                    <td>₱16.00</td>
-                    <td>₱32.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>03:20 PM</td>
-                    <td>Pancit Canton</td>
-                    <td>8</td>
-                    <td>₱14.00</td>
-                    <td>₱112.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>06:45 PM</td>
-                    <td>Nesfruta</td>
-                    <td>3</td>
-                    <td>₱21.00</td>
-                    <td>₱63.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>09:30 PM</td>
-                    <td>Coke (1.5 L)</td>
-                    <td>9</td>
-                    <td>₱70.00</td>
-                    <td>₱630.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>08:15 AM</td>
-                    <td>Chubby (pack)</td>
-                    <td>1</td>
-                    <td>₱53.00</td>
-                    <td>₱53.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>05:50 PM</td>
-                    <td>Ligo Sardines</td>
-                    <td>7</td>
-                    <td>₱27.00</td>
-                    <td>₱189.00</td>
-                </tr>
-                <tr>
-                    <td>2024-04-30</td>
-                    <td>10:00 PM</td>
-                    <td>Pillows</td>
-                    <td>5</td>
-                    <td>₱11.00</td>
-                    <td>₱55.00</td>
-                </tr>
-
+                <!-- Sales data goes here -->
             </tbody>
         </table>
     </div>
@@ -242,23 +148,9 @@
     </div>
 
     <script>
-        // Sample data for sales (replace this with your actual sales data)
         var salesData = [
-            { date: '2024-04-30', time: '07:30 AM', productName: 'Yakult(pack)', quantity: 5, unitPrice: 80.00 },
-            { date: '2024-04-30', time: '10:15 AM', productName: 'Piatos (large)', quantity: 3, unitPrice: 35.00 },
-            { date: '2024-04-30', time: '02:45 PM', productName: 'Piatos (small)', quantity: 4, unitPrice: 16.00 },
-            { date: '2024-04-30', time: '05:30 PM', productName: 'Yakult (per piece)', quantity: 7, unitPrice: 16.00 },
-            { date: '2024-04-30', time: '09:00 PM', productName: 'Piatos (small)', quantity: 9, unitPrice: 16.00 },
-            { date: '2024-04-30', time: '07:45 AM', productName: 'Marlboro Red (pack)', quantity: 6, unitPrice: 180.00 },
-            { date: '2024-04-30', time: '11:30 AM', productName: 'Marlboro Red (per piece)', quantity: 2, unitPrice: 16.00 },
-            { date: '2024-04-30', time: '03:20 PM', productName: 'Pancit Canton', quantity: 8, unitPrice: 14.00 },
-            { date: '2024-04-30', time: '06:45 PM', productName: 'Nesfruta', quantity: 3, unitPrice: 21.00 },
-            { date: '2024-04-30', time: '09:30 PM', productName: 'Coke (1.5 L)', quantity: 9, unitPrice: 70.00 },
-            { date: '2024-04-30', time: '08:15 AM', productName: 'Chubby (pack)', quantity: 1, unitPrice: 53.00 },
-            { date: '2024-04-30', time: '05:50 PM', productName: 'Ligo Sardines', quantity: 7, unitPrice: 27.00 },
-            { date: '2024-04-30', time: '10:00 PM', productName: 'Pillows', quantity: 5, unitPrice: 11.00 }
+            // Your sales data goes here
         ];
-
 
         function calculateProfitForYear() {
             var totalRevenue = 0;
@@ -276,38 +168,61 @@
             return { totalRevenue: totalRevenue.toFixed(2), totalCost: totalCost.toFixed(2), profit: profit.toFixed(2) };
         }
 
-        function calculateProfitForDay() {
-            var currentDate = new Date().toISOString().slice(0, 10);
+        function calculateProfitForDay(filteredSales) {
             var totalRevenue = 0;
             var totalCost = 0;
 
-            salesData.forEach(function(sale) {
-                if (sale.date === currentDate) {
-                    var totalPrice = sale.quantity * sale.unitPrice;
-                    var profit = totalPrice * 0.20; 
-                    var cost = totalPrice - profit;
-                    totalRevenue += totalPrice;
-                    totalCost += cost;
-                }
+            filteredSales.forEach(function(sale) {
+                var totalPrice = sale.quantity * sale.unitPrice;
+                var profit = totalPrice * 0.20; 
+                var cost = totalPrice - profit;
+                totalRevenue += totalPrice;
+                totalCost += cost;
             });
 
             var profit = totalRevenue - totalCost;
             return { totalRevenue: totalRevenue.toFixed(2), totalCost: totalCost.toFixed(2), profit: profit.toFixed(2) };
         }
 
+        function updateSalesReport(filteredSales) {
+            var tableBody = document.querySelector('table tbody');
+            tableBody.innerHTML = '';
 
+            filteredSales.forEach(function(sale) {
+                var row = `<tr>
+                    <td>${sale.date}</td>
+                    <td>${sale.time}</td>
+                    <td>${sale.productName}</td>
+                    <td>${sale.quantity}</td>
+                    <td>${sale.unitPrice}</td>
+                    <td>${(sale.quantity * sale.unitPrice).toFixed(2)}</td>
+                </tr>`;
+                tableBody.insertAdjacentHTML('beforeend', row);
+            });
+
+            var profit = calculateProfitForDay(filteredSales);
+            document.getElementById('totalRevenueDay').innerText = profit.totalRevenue;
+            document.getElementById('totalCostDay').innerText = profit.totalCost;
+            document.getElementById('profitDay').innerText = profit.profit;
+        }
+
+        function searchSalesByDate() {
+            var searchDate = document.getElementById('searchDate').value;
+            var filteredSales = salesData.filter(function(sale) {
+                return sale.date === searchDate;
+            });
+
+            updateSalesReport(filteredSales);
+        }
+
+        // Initial calculations for the year
         var profitYear = calculateProfitForYear();
         document.getElementById('totalRevenueYear').innerText = profitYear.totalRevenue;
         document.getElementById('totalCostYear').innerText = profitYear.totalCost;
         document.getElementById('profitYear').innerText = profitYear.profit;
 
-
-        var profitDay = calculateProfitForDay();
-        document.getElementById('totalRevenueDay').innerText = profitDay.totalRevenue;
-        document.getElementById('totalCostDay').innerText = profitDay.totalCost;
-        document.getElementById('profitDay').innerText = profitDay.profit;
+        // Add event listener to search by date
+        document.getElementById('searchDate').addEventListener('change', searchSalesByDate);
     </script>
 </body>
 </html>
-
-

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales Report</title>
     <style>
+        /* CSS styles for both panels */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,44 +14,94 @@
             flex-direction: column;
             align-items: center;
         }
+
         .menu {
-            background-color: #f2f2f2;
-            padding: 20px;
+            background-color: #5D5FEF;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        .menu::after {
+            content: "";
+            width: 10px;
+            height: 120%;
+            background-color: #5D5FEF;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .panel-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .panel-image {
+            height: 40px;
+            width: 50px;
+            position: absolute;
+            left: 30px;
+            border-radius: 7px;
+            margin-right: 4px;
+            border: 3px solid black;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 200;
+            font-family: 'Source Code Pro', monospace;
+            text-shadow: 0px 1px 1px black;
+            margin-left: 2%;
+        }
+
+        .button-container {
+            margin-top: 20px;
             margin-bottom: 20px;
-            display: flex;
-            justify-content: flex-start; /* Align items to the left */
-            align-items: center; /* Align items vertically */
         }
+
+        .button-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .button-image {
+            height: 40px;
+            width: 40px;
+            border-radius: 7px;
+            margin-right: 10px;
+            border: 3px solid black;
+        }
+
         .menu-button {
-            margin-right: 20px; /* Add some space between buttons */
-            background-color: #4CAF50; /* Green background */
-            border: none;
-            color: white; /* White text */
-            padding: 10px 20px; /* Padding */
-            text-align: center; /* Center text */
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
+            color: #A9A9A9;
+            width: 130px;
+            height: 57px;
+            background: white;
+            font-size: 20px;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 600;
+            border: 3px solid black;
+            box-shadow: -4px 4px 0px black;
             cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 30px;
+            position: sticky;
         }
+
         .menu-button:hover {
-            background-color: #45a049; /* Darker green on hover */
+            color: black;
         }
-        .menu button {  
-            display: block;
-            margin-bottom: 10px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .table-container {
-            width: 100%;
-            display: flex;
-            justify-content: space-between; 
-        }
-        .table-wrapper {
-            flex: 1; 
-            margin-right: 20px;
+
+        #searchDate {
+            margin-bottom: 20px;
         }
         table {
             width: 100%;
@@ -70,18 +121,54 @@
         }
         .sales-report-column {
             background-color: rgb(38, 249, 10);
-        }
+        }* Add your styles here */
     </style>
 </head>
 <body>
-    <div class="menu">
-        <button class="menu-button">Dashboard</button>
-        <button class="menu-button">Inventory</button>
-        <button class="menu-button">Sales Report</button>
-        <button class="menu-button">Alert Management</button>
-        <button class="menu-button">Sign Out</button>
-    </div>
 
+    <div class="menu">
+        <div class="panel-content">
+            <img class="panel-image" src="../images/icon.PNG" alt="Panel Image">
+            <h2>Ong n Prends</h2>
+        </div>
+
+        <div class="button-container">
+            <div class="button-wrapper">
+                <img class="button-image" src="../images/dboard.PNG" alt="Dashboard Image">
+                <button class="menu-button">Dashboard</button>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <div class="button-wrapper">
+                <img class="button-image" src="../images/invt.PNG" alt="Inventory Image">
+                <button class="menu-button">Inventory</button>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <div class="button-wrapper">
+                <img class="button-image" src="../images/sales.PNG" alt="Sales Report Image">
+                <button class="menu-button">Sales Report</button>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <div class="button-wrapper">
+                <img class="button-image" src="../images/alert.PNG" alt="Alert Management Image">
+                <button class="menu-button">Alert Management</button>
+            </div>
+        </div>
+
+        <a href="../Login/Login.html">
+            <div class="button-container">
+                <div class="button-wrapper">
+                    <img class="button-image" src="../images/sout.PNG" alt="Sign Out Image">
+                    <button class="menu-button">Sign Out</button>
+                </div>
+            </div>
+        </a>
+    </div>
     <div>
         <h1>Sales Report</h1>
         <!-- Add search bar -->
@@ -100,7 +187,112 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Sales data goes here -->
+                <!-- Updated sample data with randomized dates and times -->
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>07:30 AM</td>
+                    <td>Yakult(pack)</td>
+                    <td>5</td>
+                    <td>₱80.00</td>
+                    <td>₱400.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>10:15 AM</td>
+                    <td>Piatos (large)</td>
+                    <td>3</td>
+                    <td>₱35.00</td>
+                    <td>₱105.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>02:45 PM</td>
+                    <td>Piatos (small)</td>
+                    <td>4</td>
+                    <td>₱16.00</td>
+                    <td>₱64.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>05:30 PM</td>
+                    <td>Yakult (per piece)</td>
+                    <td>7</td>
+                    <td>₱16.00</td>
+                    <td>₱112.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>09:00 PM</td>
+                    <td>Piatos (small)</td>
+                    <td>9</td>
+                    <td>₱16.00</td>
+                    <td>₱144.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>07:45 AM</td>
+                    <td>Marlboro Red (pack)</td>
+                    <td>6</td>
+                    <td>₱180.00</td>
+                    <td>₱1,080.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>11:30 AM</td>
+                    <td>Marlboro Red (per piece)</td>
+                    <td>2</td>
+                    <td>₱16.00</td>
+                    <td>₱32.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>03:20 PM</td>
+                    <td>Pancit Canton</td>
+                    <td>8</td>
+                    <td>₱14.00</td>
+                    <td>₱112.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>06:45 PM</td>
+                    <td>Nesfruta</td>
+                    <td>3</td>
+                    <td>₱21.00</td>
+                    <td>₱63.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>09:30 PM</td>
+                    <td>Coke (1.5 L)</td>
+                    <td>9</td>
+                    <td>₱70.00</td>
+                    <td>₱630.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>08:15 AM</td>
+                    <td>Chubby (pack)</td>
+                    <td>1</td>
+                    <td>₱53.00</td>
+                    <td>₱53.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-29</td>
+                    <td>05:50 PM</td>
+                    <td>Ligo Sardines</td>
+                    <td>7</td>
+                    <td>₱27.00</td>
+                    <td>₱189.00</td>
+                </tr>
+                <tr>
+                    <td>2024-04-30</td>
+                    <td>10:00 PM</td>
+                    <td>Pillows</td>
+                    <td>5</td>
+                    <td>₱11.00</td>
+                    <td>₱55.00</td>
+                </tr>
+
             </tbody>
         </table>
     </div>
@@ -148,6 +340,7 @@
     </div>
 
     <script>
+
         var salesData = [
             // Your sales data goes here
         ];
@@ -214,6 +407,30 @@
 
             updateSalesReport(filteredSales);
         }
+        // Extract unique dates from salesData
+var uniqueDates = [...new Set(salesData.map(sale => sale.date))];
+
+// Populate the date picker's options with unique dates
+var dateInput = document.getElementById('searchDate');
+uniqueDates.forEach(function(date) {
+    var option = document.createElement('option');
+    option.value = date;
+    option.textContent = date;
+    dateInput.appendChild(option);
+});
+
+// Function to update the sales report based on selected date
+function searchSalesByDate() {
+    var searchDate = document.getElementById('searchDate').value;
+    var filteredSales = salesData.filter(function(sale) {
+        return sale.date === searchDate;
+    });
+
+    updateSalesReport(filteredSales);
+}
+
+// Add event listener to search by date
+document.getElementById('searchDate').addEventListener('change', searchSalesByDate);
 
         // Initial calculations for the year
         var profitYear = calculateProfitForYear();
@@ -223,6 +440,7 @@
 
         // Add event listener to search by date
         document.getElementById('searchDate').addEventListener('change', searchSalesByDate);
+        
     </script>
 </body>
 </html>
